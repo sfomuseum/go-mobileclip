@@ -110,6 +110,7 @@ func main() {
 		}
 
 		req := &mobileclip.EmbeddingsRequest{
+			Id:    args[1],
 			Model: model,
 			Body:  body,
 		}

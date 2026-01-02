@@ -11,14 +11,15 @@ import (
 )
 
 type Embeddings struct {
+	Id         string    `json:"id,omitempty"`
 	Embeddings []float32 `json:"embeddings"`
 	Dimensions int32     `json:"dimensions"`
 	Model      string    `json:"model"`
-	Type       string    `json:"type"`
 	Created    int64     `json:"created"`
 }
 
 type EmbeddingsRequest struct {
+	Id    string `json:"id,omitempty"`
 	Model string `json:"model"`
 	Body  []byte `json:"body"`
 }

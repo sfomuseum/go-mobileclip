@@ -110,6 +110,7 @@ func NewGrpcEmbeddingsClient(ctx context.Context, uri string) (EmbeddingsClient,
 func (e *GrpcEmbeddingsClient) ComputeTextEmbeddings(ctx context.Context, req *EmbeddingsRequest) (*Embeddings, error) {
 
 	grpc_req := &mobileclip_grpc.EmbeddingsRequest{
+		Id:    req.Id,
 		Body:  req.Body,
 		Model: req.Model,
 	}
@@ -126,6 +127,7 @@ func (e *GrpcEmbeddingsClient) ComputeTextEmbeddings(ctx context.Context, req *E
 func (e *GrpcEmbeddingsClient) ComputeImageEmbeddings(ctx context.Context, req *EmbeddingsRequest) (*Embeddings, error) {
 
 	grpc_req := &mobileclip_grpc.EmbeddingsRequest{
+		Id:    req.Id,
 		Body:  req.Body,
 		Model: req.Model,
 	}
@@ -142,6 +144,7 @@ func (e *GrpcEmbeddingsClient) ComputeImageEmbeddings(ctx context.Context, req *
 func embeddingsFromGrpcEmbeddingsResponse(rsp *mobileclip_grpc.EmbeddingsResponse) *Embeddings {
 
 	e := &Embeddings{
+		Id:         rsp.Id,
 		Model:      rsp.Model,
 		Dimensions: rsp.Dimensions,
 		Embeddings: rsp.Embeddings,

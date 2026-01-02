@@ -43,10 +43,10 @@ Where `embeddings` is a struct of type `Embeddings`:
 
 ```
 type Embeddings struct {
+	Id         string    `json:"id,omitempty"`
 	Embeddings []float32 `json:"embeddings"`
 	Dimensions int32     `json:"dimensions"`
 	Model      string    `json:"model"`
-	Type       string    `json:"type"`
 	Created    int64     `json:"created"`
 }
 ```
