@@ -117,7 +117,7 @@ func (e *GrpcEmbeddingsClient) ComputeTextEmbeddings(ctx context.Context, req *E
 	rsp, err := e.client.ComputeTextEmbeddings(ctx, grpc_req)
 
 	if err != nil {
-		return nil, fmt.Errorf("Failed to emboss image, %w", err)
+		return nil, fmt.Errorf("Failed to derive embeddings, %w", err)
 	}
 
 	return embeddingsFromGrpcEmbeddingsResponse(rsp), nil
@@ -133,7 +133,7 @@ func (e *GrpcEmbeddingsClient) ComputeImageEmbeddings(ctx context.Context, req *
 	rsp, err := e.client.ComputeImageEmbeddings(ctx, grpc_req)
 
 	if err != nil {
-		return nil, fmt.Errorf("Failed to emboss image, %w", err)
+		return nil, fmt.Errorf("Failed to derive embeddings, %w", err)
 	}
 
 	return embeddingsFromGrpcEmbeddingsResponse(rsp), nil

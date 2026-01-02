@@ -4,7 +4,7 @@ Go package for deriving vector embeddings for text and images from a MobileCLIP 
 
 ## Motivation
 
-This is a Go package for deriving vector embeddings for text and images from a MobileCLIP "service" where, for the time being, that "service" is expected to be a gRPC service as implemented by the [sfomuseum/swift-mobileclip](#) package.
+This is a Go package for deriving vector embeddings for text and images from a MobileCLIP "service" where, for the time being, that "service" is expected to be a gRPC service as implemented by the [sfomuseum/swift-mobileclip](https://github.com/sfomuseum/swift-mobileclip) package.
 
 In effect this is client-code, written in Go, for a service written in Swift.
 
