@@ -8,6 +8,10 @@ This is a Go package for deriving vector embeddings for text and images from a M
 
 In effect this is client-code, written in Go, for a service written in Swift.
 
+## Documentation
+
+`godoc` documentation is incomplete at this time.
+
 ## Usage
 
 ```
